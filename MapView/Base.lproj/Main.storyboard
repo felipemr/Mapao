@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6ov-hv-8RD">
+                                <rect key="frame" x="16" y="133" width="568" height="330"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5tJ-ip-46i"/>
+                                    <constraint firstAttribute="width" secondItem="6ov-hv-8RD" secondAttribute="height" multiplier="284:165" id="EA7-S7-Haf"/>
+                                    <constraint firstAttribute="width" secondItem="6ov-hv-8RD" secondAttribute="height" multiplier="368:225" id="HQ0-Ze-CCW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5tJ-ip-46i"/>
+                                        <exclude reference="EA7-S7-Haf"/>
+                                        <exclude reference="HQ0-Ze-CCW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="5tJ-ip-46i"/>
+                                        <exclude reference="EA7-S7-Haf"/>
+                                        <include reference="HQ0-Ze-CCW"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Você esta aqui" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-W1-dyT">
+                                <rect key="frame" x="244" y="72" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="xH9-Gj-Cnb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xH9-Gj-Cnb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="xH9-Gj-Cnb"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLl-t6-OFm">
+                                <rect key="frame" x="538" y="95" width="60" height="30"/>
+                                <state key="normal" title="Atualizar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="atualizarLoc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2P-yg-P23"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ogn-W1-dyT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="2qt-ax-qcX"/>
+                            <constraint firstItem="PLl-t6-OFm" firstAttribute="top" secondItem="6ov-hv-8RD" secondAttribute="bottom" constant="3.5" id="6rG-TF-K5k"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="top" secondItem="Ogn-W1-dyT" secondAttribute="bottom" constant="30" id="8FI-0U-tDw"/>
+                            <constraint firstItem="PLl-t6-OFm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="99s-em-uBP"/>
+                            <constraint firstAttribute="centerX" secondItem="6ov-hv-8RD" secondAttribute="centerX" id="EDC-Sg-HCy"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="top" secondItem="PLl-t6-OFm" secondAttribute="bottom" constant="10" id="HGV-BH-VpS"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JRJ-Gn-rvr"/>
+                            <constraint firstItem="PLl-t6-OFm" firstAttribute="leading" secondItem="6ov-hv-8RD" secondAttribute="leading" id="K30-tw-4H3"/>
+                            <constraint firstAttribute="centerX" secondItem="Ogn-W1-dyT" secondAttribute="centerX" id="Lxl-AX-IJw"/>
+                            <constraint firstItem="PLl-t6-OFm" firstAttribute="top" secondItem="6ov-hv-8RD" secondAttribute="bottom" constant="10" id="PcC-jD-axQ"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VMw-3b-abo"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gl5-PZ-Mgm"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qWN-EA-Asu"/>
+                            <constraint firstItem="6ov-hv-8RD" firstAttribute="top" secondItem="Ogn-W1-dyT" secondAttribute="bottom" constant="43.5" id="zhS-Kl-YI0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8FI-0U-tDw"/>
+                                <exclude reference="EDC-Sg-HCy"/>
+                                <exclude reference="HGV-BH-VpS"/>
+                                <exclude reference="JRJ-Gn-rvr"/>
+                                <exclude reference="VMw-3b-abo"/>
+                                <exclude reference="gl5-PZ-Mgm"/>
+                                <exclude reference="qWN-EA-Asu"/>
+                                <exclude reference="zhS-Kl-YI0"/>
+                                <exclude reference="2qt-ax-qcX"/>
+                                <exclude reference="Lxl-AX-IJw"/>
+                                <exclude reference="6rG-TF-K5k"/>
+                                <exclude reference="99s-em-uBP"/>
+                                <exclude reference="K30-tw-4H3"/>
+                                <exclude reference="PcC-jD-axQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="8FI-0U-tDw"/>
+                                <exclude reference="EDC-Sg-HCy"/>
+                                <exclude reference="HGV-BH-VpS"/>
+                                <include reference="JRJ-Gn-rvr"/>
+                                <include reference="VMw-3b-abo"/>
+                                <include reference="gl5-PZ-Mgm"/>
+                                <include reference="qWN-EA-Asu"/>
+                                <include reference="zhS-Kl-YI0"/>
+                                <include reference="2qt-ax-qcX"/>
+                                <include reference="Lxl-AX-IJw"/>
+                                <include reference="6rG-TF-K5k"/>
+                                <include reference="99s-em-uBP"/>
+                                <exclude reference="K30-tw-4H3"/>
+                                <exclude reference="PcC-jD-axQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapa" destination="6ov-hv-8RD" id="eI1-PY-d3n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
